@@ -1,20 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Nov 11, 2025 2:07:52 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="db_mahasiswa" name="model.Mahasiswa" optimistic-lock="version" table="mahasiswa">
-    <id name="id" type="java.lang.Integer">
-      <column name="id"/>
-      <generator class="identity"/>
-    </id>
-    <property name="npm" type="string">
-      <column length="20" name="npm" not-null="true"/>
-    </property>
-    <property name="nama" type="string">
-      <column length="100" name="nama" not-null="true"/>
-    </property>
-    <property name="jurusan" type="string">
-      <column length="50" name="jurusan" not-null="true"/>
-    </property>
-  </class>
+    <class catalog="perusahaan" name="model.Karyawan" table="karyawan">
+        <id name="id" type="java.lang.Integer">
+            <column name="id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nip" type="string">
+            <column name="nip" length="20" not-null="true" unique="true"/>
+        </property>
+        <property name="nama" type="string">
+            <column name="nama" length="100" not-null="true"/>
+        </property>
+        <property name="jenisKelamin" type="string">
+            <column name="jenis_kelamin" length="1" not-null="true"/>
+        </property>
+        <property name="tanggalLahir" type="date">
+            <column name="tanggal_lahir"/>
+        </property>
+        <property name="alamat" type="string">
+            <column name="alamat"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100"/>
+        </property>
+        <property name="telepon" type="string">
+            <column name="telepon" length="15"/>
+        </property>
+        <property name="jabatan" type="string">
+            <column name="jabatan" length="50" not-null="true"/>
+        </property>
+        <property name="gaji" type="java.lang.Double">
+            <column name="gaji"/>
+        </property>
+        <property name="tanggalMasuk" type="date">
+            <column name="tanggal_masuk" not-null="true"/>
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="10"/>
+        </property>
+        <property name="createdAt" type="timestamp">
+            <column name="created_at"/>
+        </property>
+        <property name="updatedAt" type="timestamp">
+            <column name="updated_at"/>
+        </property>
+    </class>
 </hibernate-mapping>

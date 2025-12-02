@@ -3,19 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hibernatemahasiswa;
+package hibernatekaryawan;
+
+import view.FormCRUDKaryawan;
 
 /**
  *
  * @author hp
  */
-public class HibernateMahasiswa {
+public class HibernateKaryawan {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FormCRUDKaryawan form = new FormCRUDKaryawan();
+        form.setVisible(true);
     }
     
 }

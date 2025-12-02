@@ -3,15 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Projek/HibernateMahasiswa/reports/LaporanMahasiswa.jrxml</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/hibernatemahasiswa/HibernateMahasiswa.java</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/model/Mahasiswa.java</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/report/ReportGenerator.java</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/model/Mahasiswa.hbm.xml</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/util/NewHibernateUtil.java</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/view/FormCRUDMahasiswa.java</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/hibernate.cfg.xml</file>
-            <file>file:/D:/Projek/HibernateMahasiswa/src/hibernate.reveng.xml</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/hibernate.cfg.xml</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/hibernate.reveng.xml</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/hibernatekaryawan/HibernateKaryawan.java</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/model/Karyawan.hbm.xml</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/report/ReportGenerator.java</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/view/FormCRUDKaryawan.java</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/util/NewHibernateUtil.java</file>
+            <file>file:/D:/KULIAH/HibernateKaryawan/src/model/Karyawan.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,15 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package report;
 
-/**
- *
- * @author ASUS
- */
-import model.Mahasiswa;
+import model.Karyawan;
 import util.NewHibernateUtil;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
@@ -25,29 +16,29 @@ public class ReportGenerator {
         
         try {
             System.out.println("===========================================");
-            System.out.println("GENERATE LAPORAN MAHASISWA");
+            System.out.println("GENERATE LAPORAN KARYAWAN");
             System.out.println("===========================================");
             
-            System.out.println("1. Memuat data mahasiswa dari database...");
+            System.out.println("1. Memuat data karyawan dari database...");
             
             @SuppressWarnings("unchecked")
-            List<Mahasiswa> listMahasiswa = session.createQuery("FROM Mahasiswa").list();
+            List<Karyawan> listKaryawan = session.createQuery("FROM Karyawan").list();
             
-            System.out.println("   Data berhasil dimuat: " + listMahasiswa.size() + " records");
+            System.out.println("   Data berhasil dimuat: " + listKaryawan.size() + " records");
             
-            if (listMahasiswa.isEmpty()) {
+            if (listKaryawan.isEmpty()) {
                 System.out.println("   ERROR: Tidak ada data untuk ditampilkan!");
                 return;
             }
             
-            String reportPath = "reports/LaporanMahasiswa.jrxml";
+            String reportPath = "reports/LaporanKaryawan.jrxml";
             
             System.out.println("2. Compiling report template...");
             JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
             System.out.println("   Report template berhasil di-compile");
             
             System.out.println("3. Menyiapkan data source...");
-            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(listMahasiswa);
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(listKaryawan);
             
             HashMap<String, Object> parameters = new HashMap<>();
             
@@ -57,7 +48,8 @@ public class ReportGenerator {
             
             System.out.println("5. Menampilkan report viewer...");
             JasperViewer viewer = new JasperViewer(jasperPrint, false);
-            viewer.setTitle("Laporan Data Mahasiswa");            viewer.setVisible(true);
+            viewer.setTitle("Laporan Data Karyawan");
+            viewer.setVisible(true);
             
             System.out.println("===========================================");
             System.out.println("LAPORAN BERHASIL DITAMPILKAN");
@@ -82,25 +74,25 @@ public class ReportGenerator {
             System.out.println("EXPORT LAPORAN KE PDF");
             System.out.println("===========================================");
             
-            System.out.println("1. Memuat data mahasiswa dari database...");
+            System.out.println("1. Memuat data karyawan dari database...");
             
             @SuppressWarnings("unchecked")
-            List<Mahasiswa> listMahasiswa = session.createQuery("FROM Mahasiswa").list();
+            List<Karyawan> listKaryawan = session.createQuery("FROM Karyawan").list();
             
-            System.out.println("   Data berhasil dimuat: " + listMahasiswa.size() + " records");
+            System.out.println("   Data berhasil dimuat: " + listKaryawan.size() + " records");
             
-            if (listMahasiswa.isEmpty()) {
+            if (listKaryawan.isEmpty()) {
                 System.out.println("   ERROR: Tidak ada data untuk diekspor!");
                 return;
             }
             
-            String reportPath = "reports/LaporanMahasiswa.jrxml";
+            String reportPath = "reports/LaporanKaryawan.jrxml";
             
             System.out.println("2. Compiling report template...");
             JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
             
             System.out.println("3. Menyiapkan data source...");
-            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(listMahasiswa);
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(listKaryawan);
             
             HashMap<String, Object> parameters = new HashMap<>();
             
