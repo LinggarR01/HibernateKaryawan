@@ -28,10 +28,11 @@ public class FormCRUDKaryawan extends javax.swing.JFrame {
     
     public FormCRUDKaryawan() {
        
-        initComponents();  // Inisialisasi komponen GUI (otomatis dari NetBeans)
+        initComponents();  
         // Setup tambahan setelah GUI dibuat
-        initTable();        // Siapkan kolom table
-        loadData();         // Load data dari database
+        initTable();        
+        // Load data dari database
+        loadData();         
         
         // Set window di tengah layar
         setLocationRelativeTo(null);
